@@ -1,0 +1,17 @@
+<app-events></app-events>
+<h1 class={{cname}}>{{name}}</h1>
+<h2>{{Country}}</h2>
+<h3>{{d}}</h3>
+<h3>{{34*2}}</h3>
+<img src={{path}} alt="Not found" height="100" width="100"><br>
+
+<div class=t>Name:<input type=text>
+<button [disabled]=isdisabled>Submit</button></div>
+<br>
+Mobile_no:<input type="text" [hidden]=y>
+<h1 [class]="con? 'red': 'green' ">Class Attribute</h1>
+<h2 [class]="['ss','org']">hello</h2><br>
+<h1>Click Events</h1>
+<button (click)=increment()>Increment</button>
+<button (click)=decrement()>decrement</button>
+<h1>{{count}}</h1>

@@ -1,0 +1,25 @@
+<h1>In Events Component!!</h1>
+
+<div>
+    <button (click)="printData()">Print To Console</button>
+</div>
+
+<br>
+
+<div>
+    <select (change)="printChange()" [(ngModel)]="selectedCountry">
+        <option *ngFor="let name of countryList ">{{name}}</option>
+    </select>
+</div>
+
+<br/>
+<div>
+    <button (click)="showOrHide()">Show/Hide</button>
+</div>
+
+<p *ngIf="isVisible else secretBlock">Mesage is reveiled!!!</p>
+
+
+<ng-template #secretBlock>
+    <p>Secret Message</p>
+</ng-template>
