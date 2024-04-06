@@ -1,0 +1,22 @@
+
+<h1>Student App</h1>
+Name:<input type="text" [(ngModel)]="d.name"><br><br>
+Age:<input type="number" [(ngModel)]="d.age"><br><br>
+Gender:<input type="radio" name="r" [(ngModel)]="d.gender" value="Male">Male
+<input type="radio" name="r" [(ngModel)]="d.gender" value="Female">Female
+<input type="radio" name="r" [(ngModel)]="d.gender" value="Others">Others<br><br>
+Passedout:<select [(ngModel)]="d.passedOut">
+    <option *ngFor="let y of year" [ngValue]="y">
+        {{y}}
+    </option>
+</select><br><br>
+<input type="checkbox" [(ngModel)]="d.remoteMode">Remote
+<input type="checkbox" [(ngModel)]="d.hybridMode">Hybrid<br><br>
+Exp:<input type="number" [(ngModel)]="d.experience"><br><br>
+<div *ngIf="d.experience">
+    Company Name:<br>
+    <textarea row="4" col="50" [(ngModel)]="d.commpanyName"></textarea>
+</div>
+<button (click)="print($event)">Submit</button><br><br>
+<button title="Remove data" (click)=Update($event) style="background-color: green;">Reset</button>
+
