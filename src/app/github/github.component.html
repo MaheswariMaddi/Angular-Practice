@@ -1,0 +1,21 @@
+<div>
+    <input type="text" placeholder="Enter UserName" [(ngModel)]="name" />
+
+    <button (click)="getUserData()">Get User Data</button>
+</div>
+<div *ngIf="userdetails">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Comapany</th>
+            <th>Bio</th>
+        </tr>
+        <tr>
+            <td>{{userdetails.name}}</td>
+            <td> <img src="{{userdetails.avatar_url}}" width="50" height="50"></td>
+            <td>{{userdetails.company}}</td>
+            <td>{{userdetails.bio}}</td>
+        <tr>
+    </table>
+</div>

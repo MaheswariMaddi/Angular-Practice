@@ -1,0 +1,44 @@
+<div *ngFor="let y of m.year">
+    {{y}}
+</div>
+<button (click)="Addyear()">Add</button>
+<h1 class={{cname}}>{{name}}</h1>
+<h2>{{Country}}</h2>
+<h3>{{d}}</h3>
+<h3>{{34*2}}</h3>
+<img src={{path}} alt="Not found" height="100" width="100"><br>
+
+<div class=t>Name:<input type=text>
+<button [disabled]=isdisabled>Submit</button></div>
+<br>
+Mobile_no:<input type="text" [hidden]=y>
+<h1 [class]="con? 'red': 'green' ">Class Attribute</h1>
+<h2 [class]="['ss','org']">hello</h2><br>
+<h1>Click Events</h1>
+<button (click)=increment()>Increment</button>
+<button (click)=decrement()>decrement</button>
+<h1>{{count}}</h1><br>
+<p>One way event binding</p>
+<input type="text" (input)=changename($event)>
+<h1>Name:{{n}}</h1>
+<p>Two Way event binding</p>
+<input type="text" [(ngModel)]="city">
+<h1>{{city}}</h1>
+<button (click)=updatecity()>Update</button>
+<h4>Please select below option</h4>
+<input type=radio  name="radio" [(ngModel)]="show" [value]="true">YES <br>
+<input type=radio  name="radio" [(ngModel)]="show" [value]="false">NO <br>
+
+
+<a href="https://images.pexels.com/photos/1463295/pexels-photo-1463295.jpeg?cs=srgb&dl=animal-avian-beak-1463295.jpg&fm=jpg" 
+*ngIf="show">Click here</a>
+
+<img src="https://th.bing.com/th/id/OIP.JEHNALGlEvRJ2J3D7Ad5fwHaFC?pid=ImgDet&w=474&h=322&rs=1" 
+*ngIf="!show">
+<h3 *ngFor="let m of country" >{{m}}</h3>
+<h2 *ngIf="s;else mahi ">hello</h2>
+<ng-template #mahi>
+    hiiii
+</ng-template>
+<p *ngFor="let n of arr;index as i">{{n*2}},{{i}}</p>
+

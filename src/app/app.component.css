@@ -1,17 +1,25 @@
-.Special{border:solid 2px greenyellow;
-    color:red
-}
-.ss{
-    background-color: aquamarine;
-}
- .org{
-    padding-bottom: 10cqb;
-    margin-bottom: auto;
+ul li{
+    list-style: none;
 
 }
-.red{
-    background-color: red;
+ul li a {
+
+    text-decoration:none ;
 }
-.green{
-    background-color: green;
+ul{
+    display:flex;
+    justify-content: flex-start;
+    gap:20px;
+    background-color: yellow;
+    height: 40px;
+
+}
+a{
+    line-height: 40px;
+    color:blue;
+}
+.active{
+color: green;
+text-decoration: underline !important;
+
 }
