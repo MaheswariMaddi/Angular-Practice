@@ -1,21 +1,21 @@
 <div>
     <input type="text" placeholder="Enter UserName" [(ngModel)]="name" />
 
-    <button (click)="getUserData()">Get User Data</button>
+    <button (click)="getUserData()">Add</button>
 </div>
 <div *ngIf="userdetails">
-    <table>
+    <table >
         <tr>
             <th>Name</th>
             <th>Image</th>
             <th>Comapany</th>
             <th>Bio</th>
         </tr>
-        <tr>
-            <td>{{userdetails.name}}</td>
-            <td> <img src="{{userdetails.avatar_url}}" width="50" height="50"></td>
-            <td>{{userdetails.company}}</td>
-            <td>{{userdetails.bio}}</td>
+        <tr *ngFor="let k of s">
+            <td>{{k.name}}</td>
+            <td> <img src="{{k.avatar_url}}" width="50" height="50"></td>
+            <td>{{k.company}}</td>
+            <td>{{k.bio}}</td>
         <tr>
     </table>
 </div>
