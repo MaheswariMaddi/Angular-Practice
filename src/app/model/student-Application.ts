@@ -8,13 +8,13 @@ export class StudentApplication {
     remoteMode: boolean;
     hybridMode: boolean;
     experience!: number;
-    commpanyName: string;
+    companyName: string;
 
     constructor() {
         this.name = "";
         this.gender = "";
         this.remoteMode = false;
         this.hybridMode = false;
-        this.commpanyName = "";
+        this.companyName = "";
     }
 }

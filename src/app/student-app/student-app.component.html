@@ -15,8 +15,13 @@ Passedout:<select [(ngModel)]="d.passedOut">
 Exp:<input type="number" [(ngModel)]="d.experience"><br><br>
 <div *ngIf="d.experience">
     Company Name:<br>
-    <textarea row="4" col="50" [(ngModel)]="d.commpanyName"></textarea>
+    <textarea row="4" col="50" [(ngModel)]="d.companyName"></textarea>
 </div>
-<button (click)="print($event)">Submit</button><br><br>
+<button (click)="submit()">Submit</button><br><br>
 <button title="Remove data" (click)=Update($event) style="background-color: green;">Reset</button>
-
+<br><br>
+<div>
+    <input type="text" [(ngModel)]="name">
+    <button (click)="Getdata()">Getdata</button>
+    <p style="color:red;background-color: yellow;">{{result | json}}</p>
+</div>
