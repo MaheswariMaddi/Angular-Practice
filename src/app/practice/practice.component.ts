@@ -1,19 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListService } from '../services/list.service';
 
 @Component({
   selector: 'app-practice',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.css'
 })
 export class PracticeComponent {
+  @Input() d2?:number[];
 
   constructor(public m:ListService){
-  
+ 
 
   }
   Addyear(){
@@ -58,3 +59,4 @@ export class PracticeComponent {
   }
 
 }
+

@@ -5,6 +5,7 @@ import { StudentApplication } from '../model/student-Application';
 import { ListService } from '../services/list.service';
 import { JobPortalService } from '../services/job-portal.service';
 
+
 @Component({
   selector: 'app-student-app',
   standalone: true,

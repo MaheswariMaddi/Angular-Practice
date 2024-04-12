@@ -4,10 +4,11 @@ import { GithubUserDataService } from '../services/github-user-data.service';
 import { GithubUserProfile } from '../model/github-user-profile';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-github',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,],
   templateUrl: './github.component.html',
   styleUrl: './github.component.css'
 })
@@ -17,7 +18,6 @@ export class GithubComponent {
   name: string;
   userdetails:GithubUserProfile | null;
   s:Array<GithubUserProfile>;
-
 
   constructor(githubUserServiceObj: GithubUserDataService) {
     this.githubUserService = githubUserServiceObj;
@@ -34,6 +34,7 @@ export class GithubComponent {
                              this.s.push(this.userdetails);                  
 
                           });
+                        
 
   }
 

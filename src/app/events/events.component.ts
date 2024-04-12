@@ -2,10 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+
+
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule,],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })
@@ -13,6 +15,7 @@ export class EventsComponent {
   selectedCountry: string = "Russia";
   isVisible: boolean = false;
   countryList = ["India", "Russia", "Srilanka", "Japan"];
+  parent="app-event"
 
   printData() {
     console.log("Click event triggered.......");
